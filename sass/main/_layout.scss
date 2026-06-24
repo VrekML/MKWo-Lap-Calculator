@@ -1,0 +1,109 @@
+/*--------------------------------------------------------------
+# layout
+--------------------------------------------------------------*/
+
+// #region base
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--size-body);
+  margin: 0 auto;
+
+  color: var(--white-text);
+  background-color: var(--dark);
+}
+// #endregion base
+
+
+
+// #region sections
+
+header, section, footer {
+  max-width: 100%;
+}
+
+section {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 10vh;
+  scroll-margin-top: 10vh;
+}
+
+footer {
+  margin-top: 10vh;
+  height: 20vh;
+}
+
+// #endregion sections
+
+
+
+// #region liens
+
+a {
+  text-decoration: none;
+  color: var(--white-text);
+
+  &:hover {
+    color: var(--yellow-main);
+    transition: color 0.2s ease;
+  }
+}
+
+button {
+  color: var(--orange-main);
+  text-decoration: none;
+  border: 1px var(--orange-main) solid;
+  border-radius: 5px;
+  background: none;
+  outline: none;
+
+  padding: 0.5em 1em;
+
+  &:hover {
+    cursor: pointer;
+
+    background-color: var(--yellow-main);
+    color: var(--dark);
+    border: 1px var(--yellow-main) solid;
+
+    transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+  }
+}
+// #endregion liens
+
+
+
+// #region texte
+h1, h2, h3 {
+  font-family: var(--font);
+  font-weight: var(--weight-l);
+  // color: var(--yellow-main);
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+p {
+  font-family: var(--font);
+  font-weight: var(--weight-m);
+}
+
+// #endregion texte
